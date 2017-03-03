@@ -2,9 +2,9 @@ var _Airspace = new function (){
   var _allPlanes = [];
 
   return {
-    Planes: function(){ return _allPlanes },
+    planes: function(){ return _allPlanes },
     newPlane: function(){
-      var x = new _Plane();
+      var x = new plane();
       _allPlanes.push(x);
       return;
     },
@@ -17,7 +17,7 @@ var _Airspace = new function (){
 }
 
 /***** Plane Constructor Function *****/
-function _Plane(){
+function plane(){
   // var this = this;
 // Plane Objects Variables
   this._posX = 0;
@@ -47,7 +47,7 @@ function _Plane(){
   }
 
 // Plane Objects this Invoking Timer Function to update position
-  this.timer = setInterval(this.changePosition.bind(this), 1000);
+  this.timer = setInterval(this.changePosition.bind(this), 50);
 
 }
-/***** End of Plan Constructor *****/
+/***** End of Plane Constructor *****/
